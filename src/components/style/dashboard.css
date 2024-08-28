@@ -1,0 +1,146 @@
+/* dashboard.css */
+
+/* Global styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Posiciona os elementos do navbar mais abaixo */
+  padding: 20px 20px; /* Aumenta o padding para dar mais espaço ao logo e ícones */
+  background-color: #319795;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px; /* Move o logo mais para baixo */
+}
+
+.navbar .user-profile {
+  display: flex;
+  align-items: flex-start; /* Posiciona os ícones mais para baixo */
+  gap: 15px; /* Aumenta o espaçamento entre os ícones */
+  margin-top: 10px; /* Move os ícones mais para baixo */
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #319795;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sidebar a:hover {
+  background-color: #2c7a7b;
+}
+
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+  background-color: #f0f4f8;
+  min-height: calc(100vh - 80px); /* Ajuste para considerar o padding do navbar */
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #319795;
+  color: white;
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+  .sidebar a {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .user-profile {
+    gap: 10px;
+  }
+  
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+}
